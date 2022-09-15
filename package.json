@@ -4,6 +4,7 @@
   "description": "Trying to get Cypress running from within an Ubuntu docker container on macOS and Windows.",
   "main": "index.js",
   "scripts": {
+    "cypress:run": "cypress run --browser electron --e2e",
     "cypress:open": "cypress open --browser electron --e2e"
   },
   "repository": {
