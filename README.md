@@ -1,11 +1,26 @@
 # cypress-from-dev-container
 
-Trying to get Cypress running from within an Ubuntu docker container on macOS and Windows.
+Getting Cypress GUI running from within an Ubuntu docker container on macOS and Windows. Linux pending.
 
-So far, XQuartz is working on macOS.
-
-First Start XQuartz and in **Applications > Terminal** run `xhost + $LOCAL_IP`, replacing `$LOCAL_IP` with your actual local IP address.
-
-```shell
-docker run --rm -it --env="DISPLAY=$(ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}'):0" -v /tmp/.X11-unix:/tmp/.X11-unix:rw cy-dev /bin/bash
+```jsonc
+// .devcontainer/devcontainer.json
+{
+  "containerEnv": {
+    "DISPLAY": "host.docker.internal:0" // Docker Desktop DNS for host machine
+  }
+}
 ```
+
+X.Org for Windows and macOS is provided by [XQuartz]() and [VcXsrv](), respectively.
+
+## Windows
+
+- Install `VcXsrv`
+- ...launch and config
+- clone repo into VS Code
+
+## macOS
+
+- Install `XQuartz`
+- ...launch and config
+- clone repo into VS Code
