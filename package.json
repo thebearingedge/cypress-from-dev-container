@@ -1,0 +1,23 @@
+{
+  "name": "cypress-from-dev-container",
+  "version": "1.0.0",
+  "description": "Trying to get Cypress running from within an Ubuntu docker container on macOS and Windows.",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open --browser electron --e2e"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thebearingedge/cypress-from-dev-container.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thebearingedge/cypress-from-dev-container/issues"
+  },
+  "homepage": "https://github.com/thebearingedge/cypress-from-dev-container#readme",
+  "devDependencies": {
+    "cypress": "^10.8.0"
+  }
+}
